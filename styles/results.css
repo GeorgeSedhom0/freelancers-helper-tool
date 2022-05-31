@@ -1,0 +1,54 @@
+#results {
+  position: relative;
+  direction: rtl;
+  border: var(--mainColor) 0.1em solid;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+#results::before {
+  content: "Copy";
+  font-size: 0em;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  opacity: 0;
+  transform: translate(0%, -50%);
+  margin: 0px;
+  padding: 0.1em;
+  border: var(--mainColor) 0.1em dashed;
+  transition: all 0.35s ease-out;
+}
+#results:hover::before {
+  content: "Copy";
+  font-size: 0.7em;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0%, -50%);
+  margin: 0px;
+  padding: 0.1em;
+  border: var(--mainColor) 0.1em dashed;
+  transition: all 0.35s ease-out;
+}
+#results:focus::before {
+  content: "Copied";
+  font-size: 0.7em;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0%, -50%);
+  margin: 0px;
+  padding: 0.1em;
+  border: var(--mainColor) 0.1em dashed;
+  transition: all 0.35s ease-out;
+}
+
+#results:after {
+  content: "a";
+  position: absolute;
+  color: transparent;
+}
