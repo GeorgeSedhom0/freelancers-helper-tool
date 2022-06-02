@@ -10,7 +10,7 @@ app.use(cors());
 app.get("/khamsat/", async (req, res) => {
   const browser = await puppeteer
     .use(StealthPlugin())
-    .launch({ headless: true });
+    .launch({ headless: false });
   const page = await browser.newPage();
   if (!req.headers.link) {
     console.log("invalid");

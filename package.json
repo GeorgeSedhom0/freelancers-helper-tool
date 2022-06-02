@@ -1,0 +1,23 @@
+{
+  "name": "web-scraping",
+  "version": "1.0.0",
+  "description": "Making website to help freelancers create quality offers in no time\r my main ideas for now is",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeSedhom0/freelancers-helper-tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgeSedhom0/freelancers-helper-tool/issues"
+  },
+  "homepage": "https://github.com/GeorgeSedhom0/freelancers-helper-tool#readme",
+  "dependencies": {
+    "typescript": "^4.7.2"
+  }
+}

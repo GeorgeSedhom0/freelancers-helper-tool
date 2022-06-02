@@ -40,18 +40,20 @@ body {
   width: 100%;
 }
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  place-items: center;
   width: 100%;
   background-color: black;
   color: white;
   margin-bottom: 1em;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
+  z-index: 3;
 }
 #mainTitle {
+  text-align: center;
   font-size: 2em;
   font-weight: bold;
   margin: 0;
@@ -75,18 +77,5 @@ header {
   color: rgb(56, 127, 104);
   text-decoration: none;
   font-size: 1em;
-  cursor: pointer;
-}
-#menuButton {
-  position: absolute;
-  left: 0px;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  margin: 0.5em;
-  background-color: #f0f0f0;
-  color: black;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: bold;
   cursor: pointer;
 }

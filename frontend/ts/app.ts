@@ -1,10 +1,11 @@
-const submitButton = document.querySelector("#submit");
-const result = document.querySelector("#results");
-const loader = document.querySelector("#loader");
+import { sideBarConrtoller } from "./styling";
+const submitButton = document.querySelector("#submit") as Element;
+const result = document.querySelector("#results") as Element;
+const loader = document.querySelector("#loader") as Element;
 
 submitButton.addEventListener("click", async () => {
-  const link = document.querySelector("#link").value;
-
+  const linkElement = document.querySelector("#link") as HTMLInputElement;
+  const link = linkElement.value;
   if (!linkIsValid(link)) {
     alert("Enter a valid link");
     return;
@@ -15,16 +16,18 @@ submitButton.addEventListener("click", async () => {
 
 const getRequiredLanguage = () => {
   //get checked language
-  const language = document.querySelector('input[name="lang"]:checked');
+  const language = document.querySelector(
+    'input[name="lang"]:checked'
+  ) as HTMLInputElement;
   return language ? language.value : "ar";
 };
-const linkIsValid = (link) => {
+const linkIsValid = (link: string) => {
   const websiteLink = "https://khamsat.com/community/requests";
   // check if link contains websiteLink
   return link.includes(websiteLink);
 };
 
-const mainFunk = async (link, lang) => {
+const mainFunk = async (link: string, lang: string) => {
   loader.classList.add("loader");
   let res;
   try {
@@ -48,3 +51,5 @@ const mainFunk = async (link, lang) => {
   loader.classList.remove("loader");
   result.innerHTML = data;
 };
+
+sideBarConrtoller();
