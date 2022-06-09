@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/results.css" />
     <link rel="stylesheet" href="styles/sideBar.css" />
+    <link rel="stylesheet" href="styles/settings.css" />
+    <link rel="stylesheet" href="styles/cards.css " />
 
     <script defer src="build/bundle.js"></script>
     <meta charset="UTF-8" />
@@ -18,46 +20,79 @@
     <title>Freelancers helper</title>
   </head>
   <body>
-    <!-- header -->
     <header>
       <div id="menuButton">
         <div class="menuButton closeButton r open"></div>
+        <div class="menuButton closeButton m open"></div>
         <div class="menuButton closeButton l open"></div>
       </div>
-      <h1 id="mainTitle">GMK2 Freelancers helper website</h1>
+      <h1 id="mainTitle">Header Text place holder</h1>
+      <button class="btn" id="getStarted">Get Started</button>
     </header>
+    <div id="cover"></div>
     <div id="sideBar" tabindex="1">
       <ul>
         <li>
-          <a href="home.html">Home</a>
+          <a href="home.html" class="btn">Home</a>
         </li>
         <li>
-          <a href="about.html">About</a>
+          <a href="about.html" class="btn">About</a>
         </li>
         <h5>Freelancing sites</h5>
         <li>
-          <a href="khamsat.html">khamsat</a>
+          <a href="khamsat.html" class="btn">khamsat</a>
         </li>
         <li>
-          <a href="freelancer.html">Freelancer</a>
+          <a href="freelancer.html" class="btn">Freelancer</a>
         </li>
         <li>
-          <a href="upwork.html">upwork</a>
+          <a href="upwork.html" class="btn">upwork</a>
         </li>
       </ul>
     </div>
+    <section class="cardContainer">
+      <h1>
+        Stop wasting time on writing the proposal <br />
+        <strong style="color: var(--mainColor)">And start</strong> working on
+        your project
+      </h1>
+      <p class="card">
+        As a freelancer you'll be typing proposals all day everyday.
+        <br />
+        And you can eaily notice that you repeat the same proposal over and over
+        <br />
 
-    <div class="center">
-      <input type="text" id="link" placeholder="khamsat link" />
-      <button id="submit">Request</button>
-      <div class="languagePicker"></div>
+        with a few adjustments regarding the client you're writing for.
+        <br />
+        but this feels wrong so what about something different?
+        <br />
+        Get started with the Freelancers Helpers and
+        <strong style="color: var(--mainColor)">Get Working</strong>
+      </p>
+    </section>
+    <section class="cardContainer">
+      <h2>How does it work?</h2>
+      <p class="card">
+        You'll start by picking a few settings then go ahead and get your first
+        proposal
+        <br />
+        you'll get a chance to save your settings on a local file
+        <br />
+        the setting will be saved in your local storage, but it's always a good
+        idea to get a backup
+        <br />
+      </p>
+    </section>
+    <div id="settingsSetup">
+      <h3>
+        Welcome to the freelancers helper. <br />
+        Here you can find the best tools to help you as a freelancer
+      </h3>
+      <span> To get started you'll need to pick a few settings. <br /> </span>
+      <div>
+        <button class="settings btn" id="newSettings">New Settings</button>
+        <button class="settings btn" id="loadSettings">Load Settings</button>
+      </div>
     </div>
-    <div class="center">
-      <input type="radio" name="lang" value="ar" /> Arabic
-      <input type="radio" name="lang" value="en" /> English
-    </div>
-    <div id="loader"></div>
-
-    <h2 id="results" tabindex="1">Results</h2>
   </body>
 </html>

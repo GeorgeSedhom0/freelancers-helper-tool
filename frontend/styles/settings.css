@@ -1,0 +1,38 @@
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#settingsSetup {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 0.5em solid var(--mainColor);
+  border-radius: 0.5em;
+  background-color: rgb(236, 234, 234);
+  padding: 1em;
+  display: none;
+  animation: fade-in-down 0.5s;
+}
+.settingsSetup {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+}

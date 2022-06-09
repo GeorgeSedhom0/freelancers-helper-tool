@@ -9,9 +9,10 @@
   width: 20vw;
   height: 100%;
   font-size: 1.2em;
-  background-color: #ffff;
+  border-right: 0.1em solid var(--mainColor);
+  background-color: #f0f0f0;
   z-index: 2;
-  border: 0.2em solid black;
+
   transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 800px) {
@@ -23,7 +24,7 @@
 #sideBar ul {
   list-style: none;
   padding: 1em;
-  padding-top: 2em;
+  padding-top: 4em;
   width: 100%;
   height: 50%;
   display: flex;
@@ -34,20 +35,11 @@
 /* select all li on #sidebar */
 #sideBar li {
   list-style: none;
-  border: 0.2em solid var(--mainColor);
-  border-radius: 0.5em;
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-#sideBar li:hover {
-  background-color: #e0e0e0;
-  color: var(--mainColor);
 }
 #sideBar a {
   text-decoration: none;
-  color: black;
-  padding: 0.5em;
 }
+
 #sideBar h5 {
   font-size: 1.2em;
   margin-top: 1em;
@@ -67,15 +59,27 @@
   padding: 0%;
   width: 2em;
   background-color: white;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out,
+    opacity 0.25s ease-in-out;
 }
 .closeButton.r {
-  position: absolute;
+  position: relative;
   top: 0em;
   transform: rotate(45deg);
 }
 .closeButton.r.open {
   top: -0.5em;
+  transform: rotate(0deg);
+}
+.closeButton.m {
+  position: absolute;
+  top: 0em;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.closeButton.m.open {
+  opacity: 1;
+  top: 0em;
   transform: rotate(0deg);
 }
 .closeButton.l {

@@ -5,14 +5,19 @@ const sideBarConrtoller = () => {
   const sideBarWidth = sideBar.getBoundingClientRect().width;
   const menuButtonR = document.querySelector(".menuButton.r") as HTMLElement;
   const menuButtonL = document.querySelector(".menuButton.l") as HTMLElement;
+  const menuButtonM = document.querySelector(".menuButton.m") as HTMLElement;
 
   const menuButtonOpen = () => {
     menuButtonR.classList.toggle("open");
     menuButtonL.classList.toggle("open");
+    menuButtonM.classList.toggle("open");
+
   };
   const menuButtonClose = () => {
     menuButtonR.classList.remove("open");
     menuButtonL.classList.remove("open");
+    menuButtonM.classList.remove("open");
+
   };
   menuButton.addEventListener("click", () => {
     let state: number | undefined = document
