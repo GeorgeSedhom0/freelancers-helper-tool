@@ -1,0 +1,61 @@
+:root {
+  --mainColor: rgb(56, 127, 104);
+  --secColor: rgba(210, 64, 64, 1);
+}
+* {
+  border-radius: 0.25em;
+}
+#settings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35vw;
+  height: 50vh;
+  font-size: 1.2em;
+  border: 0.25em solid var(--mainColor);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 3em;
+  height: 1.5em;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: 0;
+  border: 0.05em solid black;
+  border-radius: 0.75em;
+  appearance: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+input[type="checkbox"]::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 50%;
+  content: "";
+  background-color: var(--secColor);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]:checked::before {
+  left: 50%;
+  background-color: var(--mainColor);
+}
+input {
+  margin: 0.5em;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.setting {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}

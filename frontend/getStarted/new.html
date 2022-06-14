@@ -3,9 +3,53 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/new.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script defer src="../build/getStartedNew.js"></script>
   </head>
   <body>
-    <input type="text" name="name" placeholder="Name" /><br />
-    <input type="checkbox" /><br />
+    <header>
+      <div id="menuButton">
+        <div class="menuButton closeButton r open"></div>
+        <div class="menuButton closeButton m open"></div>
+        <div class="menuButton closeButton l open"></div>
+      </div>
+      <h1 id="mainTitle">Header Text place holder</h1>
+      <button class="btn" id="getStarted">Get Started</button>
+    </header>
+    <div id="settings">
+      <span class="setting">
+        Name <input type="text" name="name" placeholder="First Name" /><br />
+      </span>
+      <span class="setting">
+        Skills
+        <input type="text" name="skill" placeholder="1 Skill Only" /><br />
+      </span>
+      <span class="setting">
+        Years of experience<input
+          type="number"
+          name="Years of experience"
+          placeholder="From 1 to 30 is suggested"
+        /><br />
+      </span>
+      <div class="center">
+        Male
+        <input type="radio" name="gander" value="female" />
+        Female
+        <input type="radio" name="gander" value="male" />
+      </div>
+
+      <div class="center">
+        Smart Mode <input type="checkbox" name="smart" /><br />
+      </div>
+      <div>
+        <button class="btn" id="save">Save</button>
+        <button class="btn" id="saveLocal">Save Locally</button>
+      </div>
+    </div>
+    <div id="propsalContainer">
+      <button id="getProposal">Get proposal</button>
+    </div>
   </body>
 </html>

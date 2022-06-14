@@ -5,11 +5,13 @@ module.exports = {
   devtool: "inline-source-map",
   entry: {
     main: "./ts/app.ts",
+    getStartedNew: "./getStarted/ts/new.ts",
+    getStartedLoad: "./getStarted/ts/load.ts",
   },
   target: "web",
   output: {
     path: path.resolve(__dirname, "./build"),
-    filename: "bundle.js",
+    filename: "[name].js",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
